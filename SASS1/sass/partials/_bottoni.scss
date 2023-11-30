@@ -1,0 +1,29 @@
+.btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 1rem 2rem;
+  font-family: inherit;
+  font-weight: inherit;
+  box-shadow: $shadow;
+  &-info {
+    background-color: scale-color($info-color, $lightness: 50%);
+    border-color: $info-color;
+    &:hover {
+      background-color: $info-color;
+    }
+  }
+  &-success {
+    background-color: scale-color($success-color, $lightness: 30%);
+    border-color: $success-color;
+    &:hover {
+      background-color: $success-color;
+    }
+  }
+  &-danger {
+    background-color: scale-color($danger-color, $lightness: 30%);
+    border-color: $danger-color;
+    &:hover {
+      background-color: $danger-color;
+    }
+  }
+}

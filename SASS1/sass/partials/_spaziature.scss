@@ -1,0 +1,49 @@
+$sizes: (
+  xs: 10px,
+  sm: 20px,
+  md: 30px,
+  lg: 60px,
+  xl: 120px,
+  xxl: 200px,
+);
+@each $key, $val in $sizes {
+  .pd-x-#{$key} {
+    padding-inline: $val;
+  }
+}
+@each $key, $val in $sizes {
+  .pd-y-#{$key} {
+    padding-block: $val;
+  }
+}
+@each $key, $val in $sizes {
+  .mg-x-#{$key} {
+    margin-inline: $val;
+  }
+}
+@each $key, $val in $sizes {
+  .mg-y-#{$key} {
+    margin-block: $val;
+  }
+}
+
+@for $i from 1 through 6 {
+  .padding-x-#{i} {
+    padding-inline: $i * 1.5rem;
+  }
+}
+@for $i from 1 through 6 {
+  .padding-y-#{i} {
+    padding-block: $i * 1.5rem;
+  }
+}
+@for $i from 1 through 6 {
+  .margin-x-#{i} {
+    margin-inline: $i * 1.5rem;
+  }
+}
+@for $i from 1 through 6 {
+  .margin-y-#{i} {
+    margin-block: $i * 1.5rem;
+  }
+}

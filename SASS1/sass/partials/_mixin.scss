@@ -1,0 +1,5 @@
+@mixin mybox($size, $val) {
+  width: $size;
+  border-radius: $val;
+  box-shadow: $shadow;
+}

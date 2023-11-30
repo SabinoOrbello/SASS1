@@ -1,0 +1,74 @@
+@import "./partials/variabili";
+@import "./partials/spaziature";
+@import "./partials/bottoni";
+@import "./partials/mixin";
+
+body {
+  margin: 0;
+  font-family: $main-font;
+}
+.container {
+  nav {
+    padding: 1rem;
+    width: 100%;
+    background-color: $main-color;
+    ul {
+      display: flex;
+      gap: 6rem;
+      li {
+        a {
+          font-size: $fs;
+          color: $light-color;
+          text-decoration: none;
+          margin-inline: 0.3rem;
+          transition: background-color 0.2s;
+          &:hover {
+            background-color: rgb(102, 0, 255);
+            border-radius: 30px;
+            padding: 0.3rem;
+          }
+        }
+      }
+      li::marker {
+        content: "😏";
+      }
+    }
+  }
+}
+
+section {
+  padding: 3rem 4rem;
+  background-color: blueviolet;
+  margin-inline: 1rem;
+  .immagine {
+    display: flex;
+    align-items: center;
+    img {
+      width: 40%;
+      box-shadow: $shadow;
+    }
+  }
+}
+div {
+  display: flex;
+  align-items: end;
+  gap: 20px;
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  justify-content: center;
+  width: 20%;
+  img {
+    @include mybox(100%, 20px);
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
